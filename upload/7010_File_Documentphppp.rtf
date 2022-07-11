@@ -1,0 +1,469 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fmodern\fprq1\fcharset0 Consolas;}{\f2\fswiss\fprq2\fcharset0 Segoe UI;}{\f3\fmodern\fprq1\fcharset0 Courier New;}{\f4\fswiss\fprq2\fcharset0 Calibri;}{\f5\fnil\fcharset0 Calibri;}{\f6\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue0;\red0\green0\blue255;\red105\green125\blue145;\red192\green0\blue0;\red0\green0\blue187;\red255\green255\blue255;\red0\green119\blue0;\red221\green0\blue0;\red49\green49\blue49;\red102\green102\blue0;\red0\green0\blue136;\red0\green102\blue102;\red0\green136\blue0;\red54\green95\blue145;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f0\fs24 Chapter 2\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\widctlpar\fi-360\li720\sa200\sl276\slmult1\b Constants\b0\par
+
+\pard\widctlpar\li720\sa200\sl276\slmult1\cf2 <?php\par
+define("con",30);\par
+echo con;\par
+?>\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\b Type Casting\b0  \par
+1.\par
+\cf2 <?php\par
+$x="20";\par
+$y=30;\par
+$s=$x+$y;\par
+echo $s;\par
+?>\par
+2.\par
+<?php\par
+$x="2.2cents";\par
+echo "$x<br>";\par
+settype($x,"integer");\par
+echo $x;\par
+?>\par
+\cf1 Chapter 3\par
+\cf0\b Sequential Statements\b0\par
+\b Conditional Statements\par
+\cf3\b0 if\cf2 ($a\i >\i0 $b)\i\{ \cf3\i0 echo \cf2\rdblquote $a is strictly greater that $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\i0\line\cf3 elseif\cf2 ($a==$b)\i\{ \cf3\i0 echo \cf2\rdblquote $a is equal to $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\i0\line\cf3 else\cf2\i\{ \cf3\i0 echo \cf2\rdblquote $a is strictly smaller that $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\par
+\cf4\i0 Switch\par
+\cf3 switch \cf2 ($i) \i\{\i0\line\cf3 case \cf2 0:\line\cf3 case \cf2 1:\line\cf3 case \cf2 2:\line\cf3 print \cf2\rdblquote i is less than 3 but not negative\rdblquote ;\line\cf3 break\cf2 ;\line\cf3 case \cf2 3:\line\cf3 print \cf2\rdblquote i is 3\rdblquote ;\line\i\}\par
+\cf1\i0 Increment and decrement\par
+\cf2 <?php\par
+$x=10;\par
+if($x<=20)\par
+\{\par
+$x++;\par
+\}\par
+echo$x;\par
+?>\par
+\cf1\ul Looping\par
+\cf2\ulnone <?php\par
+$i=1;\par
+while ($i<100)\{\par
+$i*=2;\par
+\}\par
+echo "$i<br>";\par
+\par
+?>\par
+<?php\par
+$i = 0;\par
+do\{\par
+print $i;\par
+\}while ($i>0);\par
+echo "<br>";\par
+?>\par
+\cf3 <?php\par
+for ($i=0; $i <=10; $i++)\{\par
+print $i;\par
+\}\par
+?>\cf2\i\par
+\cf1\i0\fs28 Jamb to array:\par
+\cf3\fs24 foreach \cf2 ($arr as $key =\i > \i0 $value) \i\{\i0\line\cf3 echo \cf2\rdblquote Key: $key; Value: $value\i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\par
+\par
+\par
+\cf3\i0 foreach\cf2 ($a as $k =\i > \i0 $v) \i\{\i0\line\cf3 print \cf2\rdblquote\i\\\i0 $a[$k] =\i > \i0 $v.\i\\\i0 n\rdblquote ;\line\i\}\par
+\par
+\cf1\fs28\par
+Break and continue \par
+\cf2\i0\fs24 <?php\par
+$i = 10;\par
+while (--$i)\par
+\{\par
+    if ($i == 8)\par
+    \{\par
+        continue;\par
+    \}\par
+    if ($i == 5)\par
+    \{\par
+        break;\par
+    \}\par
+    echo "$i <br>";\par
+\}\par
+?>\i\par
+\par
+\cf1\i0 Create Array\par
+\cf5 Numerical array\par
+\cf2 <?php\par
+$course = array("PHP", "JAVA", "VB");\par
+$arrlength = count($course);\par
+\par
+for($x = 0; $x <  $arrlength; $x++) \{\par
+     echo $course[$x];\par
+     echo "<br>";\par
+\}\par
+?>\par
+\par
+\cf5 Assosation array\par
+\cf2 <?php\par
+$age = array("Abebe"=>"35", "Hana"=>"37", "Astere"=>"43");\par
+\par
+foreach($age as $x => $x_value) \{\par
+     echo "Key=" . $x . ", Value=" . $x_value;\par
+     echo "<br>";\par
+\}\par
+?>\par
+\cf5 Two dimension array\par
+\cf2 <?php\par
+$marks=array(\par
+   array(80,89,79),\par
+   array(90,78,87),\par
+   array(78,90,78)\par
+);\par
+for($r=0;$r<count($marks);$r++)\par
+\{\par
+ for($c=0;$c<count($marks[$r]);$c++)\par
+ \{\par
+ echo $marks[$r][$c]."   ";\par
+ \}\par
+ echo "<br>";\par
+\}\par
+?>\par
+Sort array\par
+1.\par
+\cf1\f1\fs23 $numbers = array(4, 6, 2, 22, 11);\line sort($numbers);\line\line $arrlength = count($numbers);\line for($x = 0; $x <\~ $arrlength; $x++) \{\line\~\~\~\~ echo $numbers[$x];\line\~\~\~\~ echo "<br>";\line\}\line ?>\par
+
+\pard\cbpat7\widctlpar\s2\sb150\sa150\b 2.\cf2\b0\f2\fs45  \fs24 Sort Array (Ascending Order), According to Key - ksort()\fs45\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f1\fs23 <?php\line $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");\line ksort($age);\line\line foreach($age as $x => $x_value) \{\line\~\~\~\~ echo "Key=" . $x . ", Value=" . $x_value;\line\~\~\~\~ echo "<br>";\line\}\line ?>\par
+
+\pard\cbpat7\widctlpar\s2\sb150\sa150\b 3.\cf2\b0\f2\fs45  \fs24 Sort Array (Descending Order), According to Value - arsort()\fs45\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f1\fs23 <?php\line $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");\line arsort($age);\line\line foreach($age as $x => $x_value) \{\line\~\~\~\~ echo "Key=" . $x . ", Value=" . $x_value;\line\~\~\~\~ echo "<br>";\line\}\line ?>\cf2\f0\fs24\par
+\b Functions\par
+\cf1\b0\f1\fs23 <?php\line function sum($x, $y) \{\line\~\~\~\~ $z = $x + $y;\line\~\~\~\~ return $z;\line\}\line\line echo "5 + 10 = " . sum(5,10) . "<br>";\line echo "7 + 13 = " . sum(7,13) . "<br>";\line echo "2 + 4 = " . sum(2,4);\line ?>\par
+2\par
+\cf6\highlight7\f3\fs21 <?php\line\cf8 function\~\cf6 recursion\cf8 (\cf6 $a\cf8 )\line\{\line\~\~\~\~if\~(\cf6 $a\~\cf8 <\~\cf6 20\cf8 )\~\{\line\~\~\~\~\~\~\~\~echo\~\cf9 "\cf6 $a\cf9\\n"\cf8 ;\line\~\~\~\~\~\~\~\~\cf6 recursion\cf8 (\cf6 $a\~\cf8 +\~\cf6 1\cf8 );\line\~\~\~\~\}\line\}\line\cf6 ?>\par
+3.\par
+
+\pard\brdrl\brdrs\brdrw15\brsp80 \brdrt\brdrs\brdrw15\brsp80 \brdrr\brdrs\brdrw15\brsp80 \brdrb\brdrs\brdrw15\brsp80 \widctlpar\sa150\sl240\slmult0\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\cf10\highlight0\f1\fs18   \cf11 <?\cf10 php\par
+         \cf12\b function\cf10\b0  addFive\cf11 (\cf10 $num\cf11 )\cf10  \cf11\{\cf10\par
+            $num \cf11 +=\cf10  \cf13 5\cf11 ;\cf10\par
+         \cf11\}\cf10\par
+         \par
+         \cf12\b function\cf10\b0  addSix\cf11 (\b &\cf10\b0 $num\cf11 )\cf10  \cf11\{\cf10\par
+            $num \cf11 +=\cf10  \cf13 6\cf11 ;\cf10\par
+         \cf11\}\cf10\par
+         \par
+         $orignum \cf11 =\cf10  \cf13 10\cf11 ;\cf10\par
+         addFive\cf11 (\cf10  $orignum \cf11 );\cf10\par
+         \par
+         echo \cf14 "Original Value is $orignum<br />"\cf11 ;\cf10\par
+         \par
+         addSix\cf11 (\cf10  $orignum \cf11 );\cf10\par
+         echo \cf14 "Original Value is $orignum<br />"\cf11 ;\cf10\par
+      \cf11 ?>\cf10\par
+      \par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf2\b\f0\fs24\par
+Functions scope\par
+1.\par
+\cf6\highlight7\b0\f3\fs21 <?php\line $a\~\cf8 =\~\cf6 1\cf8 ;\line\cf6 $b\~\cf8 =\~\cf6 2\cf8 ;\line\line function\~\cf6 Sum\cf8 ()\line\{\line\~\~\~\~global\~\cf6 $a\cf8 ,\~\cf6 $b\cf8 ;\line\line\~\~\~\~\cf6 $b\~\cf8 =\~\cf6 $a\~\cf8 +\~\cf6 $b\cf8 ;\line\}\~\line\line\cf6 Sum\cf8 ();\line echo\~\cf6 $b\cf8 ;\line\cf6 ?>\cf2\highlight0\f0\fs24\par
+3.\par
+\cf6\highlight7\f3\fs21 <?php\line $a\~\cf8 =\~\cf6 1\cf8 ;\line\cf6 $b\~\cf8 =\~\cf6 2\cf8 ;\line\line function\~\cf6 Sum\cf8 ()\line\{\line\~\~\~\~\cf6 $GLOBALS\cf8 [\cf9 'b'\cf8 ]\~=\~\cf6 $GLOBALS\cf8 [\cf9 'a'\cf8 ]\~+\~\cf6 $GLOBALS\cf8 [\cf9 'b'\cf8 ];\line\}\~\line\line\cf6 Sum\cf8 ();\line echo\~\cf6 $b\cf8 ;\line\cf6 ?>\par
+\cf1\fs36 Chapter 4\par
+\cf6\fs21 File Write\par
+\cf2\highlight0\f0\fs24 <?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "w") or die("Unable to open file!");\par
+$txt = "John Doe\\n";\par
+fwrite($myfile, $txt);\par
+$txt = "Jane Doe\\n";\par
+fwrite($myfile, $txt);\par
+fclose($myfile);\par
+?>\par
+File read\par
+<?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "r") or die("Unable to open file!");\par
+while(! feof($myfile))\par
+  \{\par
+  echo fgets($myfile). "<br />";\par
+  \}\par
+fclose($myfile);\par
+?>\par
+File Append\par
+<?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "a") or die("Unable to open file!");\par
+$data = "New data line 1";\par
+fwrite($myfile, $data);\par
+$new_data ="New data line 2";\par
+fwrite($myfile, $new_data);\par
+?>\par
+\cf0\f4\fs22\par
+
+\pard\sa200\sl276\slmult1\f5\lang9 22222222222222222222222222222222222222222222222222222222222222222222\par
+
+\pard\widctlpar\sa200\sl276\slmult1\f4\lang1033 Code\par
+\par
+<html>\par
+<head>\par
+<title>FACTORIAL OF A NUMBER</title>\par
+</head>\par
+<body>\par
+<font size=5>FACTORIAL OF A NUMBER</font>\par
+<br/>\par
+<br/>\par
+<form action=factorial.php method="post">\par
+ENTER A NUMBER:<input type="text" name="t1">\par
+<br><br>\par
+<input type="submit" value="FACTORIAL">\par
+<?php\par
+if(isset($_POST["t1"]))\par
+\{\par
+$n=$_POST["t1"];\par
+$fact=1;\par
+echo "<br/>\par
+<br/>";\par
+echo "Factorial of $n is: ";\par
+\par
+while($n>0)\par
+\{\par
+$fact=$fact*$n;\par
+$n--;\par
+\}\par
+echo "$fact";\par
+\}\par
+?>\par
+</form> \par
+</body>\par
+</html>\par
+\par
+Output\par
+\par
+\par
+\par
+\par
+PHP program to find prime number\par
+
+\pard\widctlpar\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f3\fs20 <?php\par
+$i = 1;\par
+while($i<5)\par
+\{\par
+    for($j=1; $j<=$i; $j++)\par
+    \{\par
+        if ($j != 1 && $j != $i)\par
+        \{\par
+            echo $i . "/" . $j . "=" . $i%$j . "<br />";\par
+            if ($i%$j != 0)\par
+            \{\par
+                echo $i . "<br />";\par
+            \}\par
+        \}\par
+    \}\par
+    echo "<br />";\par
+    $i += 1;\par
+\}\par
+?>\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f0\fs24 Chapter 2\par
+
+\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\widctlpar\fi-360\li720\sa200\sl276\slmult1\b Constants\b0\par
+
+\pard\widctlpar\li720\sa200\sl276\slmult1\cf2 <?php\par
+define("con",30);\par
+echo con;\par
+?>\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\b Type Casting\b0  \par
+1.\par
+\cf2 <?php\par
+$x="20";\par
+$y=30;\par
+$s=$x+$y;\par
+echo $s;\par
+?>\par
+2.\par
+<?php\par
+$x="2.2cents";\par
+echo "$x<br>";\par
+settype($x,"integer");\par
+echo $x;\par
+?>\par
+\cf1 Chapter 3\par
+\cf0\b Sequential Statements\b0\par
+\b Conditional Statements\par
+\cf3\b0 if\cf2 ($a\i >\i0 $b)\i\{ \cf3\i0 echo \cf2\rdblquote $a is strictly greater that $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\i0\line\cf3 elseif\cf2 ($a==$b)\i\{ \cf3\i0 echo \cf2\rdblquote $a is equal to $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\i0\line\cf3 else\cf2\i\{ \cf3\i0 echo \cf2\rdblquote $a is strictly smaller that $b \i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\par
+\cf4\i0 Switch\par
+\cf3 switch \cf2 ($i) \i\{\i0\line\cf3 case \cf2 0:\line\cf3 case \cf2 1:\line\cf3 case \cf2 2:\line\cf3 print \cf2\rdblquote i is less than 3 but not negative\rdblquote ;\line\cf3 break\cf2 ;\line\cf3 case \cf2 3:\line\cf3 print \cf2\rdblquote i is 3\rdblquote ;\line\i\}\par
+\i0 Increment and decrement\par
+<?php\par
+$x=10;\par
+if($x<=20)\par
+\{\par
+$x++;\par
+\}\par
+echo$x;\par
+?>\par
+\i Looping\par
+\i0 <?php\par
+$i=1;\par
+while ($i<100)\{\par
+$i*=2;\par
+\}\par
+echo "$i<br>";\par
+\par
+?>\par
+\par
+<?php\par
+$i = 0;\par
+do\{\par
+print $i;\par
+\}while ($i>0);\par
+echo "<br>";\par
+?>\par
+\cf3 <?php\par
+for ($i=0; $i <=10; $i++)\{\par
+print $i;\par
+\}\par
+?>\cf2\i\par
+\cf1\i0\fs28 Jamb to array:\par
+\cf3\fs24 foreach \cf2 ($arr as $key =\i > \i0 $value) \i\{\i0\line\cf3 echo \cf2\rdblquote Key: $key; Value: $value\i <\i0 br\i >\\\i0 n\rdblquote ;\line\i\}\par
+\par
+\par
+\cf3\i0 foreach\cf2 ($a as $k =\i > \i0 $v) \i\{\i0\line\cf3 print \cf2\rdblquote\i\\\i0 $a[$k] =\i > \i0 $v.\i\\\i0 n\rdblquote ;\line\i\}\par
+\par
+\cf1\fs28\par
+Break and continue \par
+\cf2\i0\fs24 <?php\par
+$i = 10;\par
+while (--$i)\par
+\{\par
+    if ($i == 8)\par
+    \{\par
+        continue;\par
+    \}\par
+    if ($i == 5)\par
+    \{\par
+        break;\par
+    \}\par
+    echo "$i <br>";\par
+\}\par
+?>\i\par
+\par
+\i0 Create Array\par
+Numerical array\par
+<?php\par
+$course = array("PHP", "JAVA", "VB");\par
+$arrlength = count($course);\par
+\par
+for($x = 0; $x <  $arrlength; $x++) \{\par
+     echo $course[$x];\par
+     echo "<br>";\par
+\}\par
+?>\par
+\par
+Assosation array\par
+<?php\par
+$age = array("Abebe"=>"35", "Hana"=>"37", "Astere"=>"43");\par
+\par
+foreach($age as $x => $x_value) \{\par
+     echo "Key=" . $x . ", Value=" . $x_value;\par
+     echo "<br>";\par
+\}\par
+?>\par
+Two dimension array\par
+\par
+\cf15 <?php\par
+$x=array(array(1,2,3),array(4,5,6),array(7,8,9));\par
+for($i=0;$i<=2;$i++)\par
+\{\par
+for($j=0;$j<=2;$j++)\par
+\{\par
+echo $x[$i][$j];\par
+\}\par
+echo"<br>";\par
+\}\par
+?>\par
+\cf2 <?php\par
+$marks=array(\par
+   array(80,89,79),\par
+   array(90,78,87),\par
+   array(78,90,78)\par
+);\par
+for($r=0;$r<count($marks);$r++)\par
+\{\par
+ for($c=0;$c<count($marks[$r]);$c++)\par
+ \{\par
+ echo $marks[$r][$c]."   ";\par
+ \}\par
+ echo "<br>";\par
+\}\par
+?>\par
+Sort array\par
+1.\par
+\cf1\f1\fs23 $numbers = array(4, 6, 2, 22, 11);\line sort($numbers);\line\line $arrlength = count($numbers);\line for($x = 0; $x <\~ $arrlength; $x++) \{\line\~\~\~\~ echo $numbers[$x];\line\~\~\~\~ echo "<br>";\line\}\line ?>\par
+
+\pard\cbpat7\widctlpar\s2\sb150\sa150\b 2.\cf2\b0\f2\fs45  \fs24 Sort Array (Ascending Order), According to Key - ksort()\fs45\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f1\fs23 <?php\line $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");\line ksort($age);\line\line foreach($age as $x => $x_value) \{\line\~\~\~\~ echo "Key=" . $x . ", Value=" . $x_value;\line\~\~\~\~ echo "<br>";\line\}\line ?>\par
+
+\pard\cbpat7\widctlpar\s2\sb150\sa150\b 3.\cf2\b0\f2\fs45  \fs24 Sort Array (Descending Order), According to Value - arsort()\fs45\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf1\f1\fs23 <?php\line $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");\line arsort($age);\line\line foreach($age as $x => $x_value) \{\line\~\~\~\~ echo "Key=" . $x . ", Value=" . $x_value;\line\~\~\~\~ echo "<br>";\line\}\line ?>\cf2\f0\fs24\par
+\b Functions\par
+\cf1\b0\f1\fs23 <?php\line function sum($x, $y) \{\line\~\~\~\~ $z = $x + $y;\line\~\~\~\~ return $z;\line\}\line\line echo "5 + 10 = " . sum(5,10) . "<br>";\line echo "7 + 13 = " . sum(7,13) . "<br>";\line echo "2 + 4 = " . sum(2,4);\line ?>\par
+2\par
+\cf6\highlight7\f3\fs21 <?php\line\cf8 function\~\cf6 recursion\cf8 (\cf6 $a\cf8 )\line\{\line\~\~\~\~if\~(\cf6 $a\~\cf8 <\~\cf6 20\cf8 )\~\{\line\~\~\~\~\~\~\~\~echo\~\cf9 "\cf6 $a\cf9\\n"\cf8 ;\line\~\~\~\~\~\~\~\~\cf6 recursion\cf8 (\cf6 $a\~\cf8 +\~\cf6 1\cf8 );\line\~\~\~\~\}\line\}\line\cf6 ?>\par
+3.\par
+
+\pard\brdrl\brdrs\brdrw15\brsp80 \brdrt\brdrs\brdrw15\brsp80 \brdrr\brdrs\brdrw15\brsp80 \brdrb\brdrs\brdrw15\brsp80 \widctlpar\sa150\sl240\slmult0\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\cf10\highlight0\f1\fs18   \cf11 <?\cf10 php\par
+         \cf12\b function\cf10\b0  addFive\cf11 (\cf10 $num\cf11 )\cf10  \cf11\{\cf10\par
+            $num \cf11 +=\cf10  \cf13 5\cf11 ;\cf10\par
+         \cf11\}\cf10\par
+         \par
+         \cf12\b function\cf10\b0  addSix\cf11 (\b &\cf10\b0 $num\cf11 )\cf10  \cf11\{\cf10\par
+            $num \cf11 +=\cf10  \cf13 6\cf11 ;\cf10\par
+         \cf11\}\cf10\par
+         \par
+         $orignum \cf11 =\cf10  \cf13 10\cf11 ;\cf10\par
+         addFive\cf11 (\cf10  $orignum \cf11 );\cf10\par
+         \par
+         echo \cf14 "Original Value is $orignum<br />"\cf11 ;\cf10\par
+         \par
+         addSix\cf11 (\cf10  $orignum \cf11 );\cf10\par
+         echo \cf14 "Original Value is $orignum<br />"\cf11 ;\cf10\par
+      \cf11 ?>\cf10\par
+      \par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf2\b\f0\fs24\par
+Functions scope\par
+1.\par
+\cf6\highlight7\b0\f3\fs21 <?php\line $a\~\cf8 =\~\cf6 1\cf8 ;\line\cf6 $b\~\cf8 =\~\cf6 2\cf8 ;\line\line function\~\cf6 Sum\cf8 ()\line\{\line\~\~\~\~global\~\cf6 $a\cf8 ,\~\cf6 $b\cf8 ;\line\line\~\~\~\~\cf6 $b\~\cf8 =\~\cf6 $a\~\cf8 +\~\cf6 $b\cf8 ;\line\}\~\line\line\cf6 Sum\cf8 ();\line echo\~\cf6 $b\cf8 ;\line\cf6 ?>\cf2\highlight0\f0\fs24\par
+3.\par
+\cf6\highlight7\f3\fs21 <?php\line $a\~\cf8 =\~\cf6 1\cf8 ;\line\cf6 $b\~\cf8 =\~\cf6 2\cf8 ;\line\line function\~\cf6 Sum\cf8 ()\line\{\line\~\~\~\~\cf6 $GLOBALS\cf8 [\cf9 'b'\cf8 ]\~=\~\cf6 $GLOBALS\cf8 [\cf9 'a'\cf8 ]\~+\~\cf6 $GLOBALS\cf8 [\cf9 'b'\cf8 ];\line\}\~\line\line\cf6 Sum\cf8 ();\line echo\~\cf6 $b\cf8 ;\line\cf6 ?>\par
+\cf1\fs36 Chapter 4\par
+\cf6\fs21 File Write\par
+\cf2\highlight0\f0\fs24 <?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "w") or die("Unable to open file!");\par
+$txt = "John Doe\\n";\par
+fwrite($myfile, $txt);\par
+$txt = "Jane Doe\\n";\par
+fwrite($myfile, $txt);\par
+fclose($myfile);\par
+?>\par
+File read\par
+<?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "r") or die("Unable to open file!");\par
+while(! feof($myfile))\par
+  \{\par
+  echo fgets($myfile). "<br />";\par
+  \}\par
+fclose($myfile);\par
+?>\par
+File Append\par
+<?php\par
+$myfile = fopen("C:/Users/asu/Desktop/newfile.txt", "a") or die("Unable to open file!");\par
+$data = "New data line 1";\par
+fwrite($myfile, $data);\par
+$new_data ="New data line 2";\par
+fwrite($myfile, $new_data);\par
+?>\par
+
+\pard\widctlpar\sa200\sl276\slmult1\cf0\f4\fs22\par
+
+\pard\sa200\sl276\slmult1\f5\lang9\par
+}
+ 

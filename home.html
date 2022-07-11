@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<?php 
+include("lng.php"); ?>
+<html>
+<head>
+<title>e-learning</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear"> 
+    <!-- ################################################################################################ -->
+    <nav>
+      <ul>
+        <li><a href="#">Login</a></li>
+        <li><a href="?lan=am">Amharic</a></li>
+        <li><a href="?lan=en">English</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html">UOG E-LEARNING MANAGMENT SYSTEM</a></h1>
+   
+    <!-- ################################################################################################ --> 
+  </header>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <div class="rounded">
+    <nav id="mainav" class="clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a class="drop" href="aboutus.html">About us</a>
+         <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-left-2.html">Sidebar Left 2</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/sidebar-right-2.html">Sidebar Right 2</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul>-->
+        </li>
+        <li><a class="drop" href="contactus.html">contact us</a>
+          <!--<ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>-->
+        </li>
+        <li><a href="#">e-learning tips</a></li>
+       <!-- <li><a href="#">Another Link Text</a></li>
+        <li><a href="#">This a very long link</a></li>
+        <li><a href="#">This is the last</a></li>-->
+      </ul>
+      <!-- ################################################################################################ --> 
+    </nav>
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper">
+  <div id="slider">
+    <div id="slide-wrapper" class="rounded clear"> 
+      <!-- ################################################################################################ -->
+      <figure id="slide-5"><img src="images/demo/banner_r1_c1.jpg" alt="">
+       
+      </figure>
+      <!-- ################################################################################################ -->
+     
+      <!-- ################################################################################################ --> 
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+
+    
+          <!-- ################################################################################################ --> 
+    <div class="wrapper row3">
+  <div class="rounded">
+    <main class="container clear"> 
+      <!-- main body --> 
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-30"> 
+        <!-- Left Column -->
+		<h1>Welcome to E-LEARNING Management system Comment page:</h1>
+        
+          <!-- ################################################################################################ -->
+          <body class="body">
+      <div class="group">
+        
+	<form action="givecommentserv.php" method="post" onSubmit="MM_validateForm('id','','R','fname','','R','mname','','R','lname','','R','uname','','R','city','','R','tel','','NisNum','email','','RisEmail','salary','','NisNum','dpt','','R','specfic','','R','paw','','R');return document.MM_returnValue">
+<table cellspacing="3" cellpadding="6" class="loginVerticalPanel">
+<tr>
+  <td colspan="2" align="center"><strong>Create account form:</strong></td></br>
+</tr>
+   <tr>
+      <td align="right">Name:</td>
+      <td> <input type="text" name="name" pattern="[a-zA-Z]{3,100}" required x-moz-errormessage="Please Enter Letter Only Above 3 characters" title="Please Enter Letter Only Above 3 characters "   value="" size='20%' id="txt_lname" placeholder='name'></td></tr>   	  
+ <tr><td align="right">Email:</td>
+      <td> <input type="email" name="email" placeholder='email' pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;" required x-moz-errormessage="Please Enter valid email address" title="Please Enter valid email address"></td></tr> 
+	  <tr>
+ <td align="right">Age:</td>
+      <td> <input type="text" name="age" pattern="[0-9]" required x-moz-errormessage="Please Enter number Only" title="Please Enter Letter Only Above 3 characters "   value="" size='20%' id="txt_lname" placeholder='age'></td></tr>  
+</tr>
+<tr>
+<td align="right">Sex:</td>
+      <td><SELECT name="selct">
+<option>F</option>
+<option>M</option>
+
+</select>
+</td></tr> 
+<tr>	
+	  <tr><td align="right">password:</td>
+      <td> <textarea name="password"  placeholder='password'></textarea></td></tr> 
+ <tr><td align="right">Role:</td>
+      <td><SELECT name="selct">
+<option>Admin</option>
+<option>Instructor</option>
+<option>Student</option>
+</select>
+</td></tr>
+<tr>
+<td align="right">faculity:</td>
+      <td><SELECT name="selct">
+<option>Informatics</option>
+<option>computational sciense</option>
+
+</select>
+</td></tr> 
+<tr>
+<td align="right">department:</td> 
+  <td><SELECT name="selct">
+<option>computer science</option>
+<option>information system</option>
+<option>information technology</option>
+<option>information science</option>
+<option>Biology</option>
+<option>Chemistry</option>
+<option>Physics</option>
+<option>Biotechnology</option>
+<option>Geology</option>
+<option>maths</option>
+<option>Sport sciences</option>
+</select>
+</td></tr>
+<tr>
+ <td align="right">year:</td>
+      <td> <input type="text" name="name" pattern="[0-9]" required x-moz-errormessage="Please Enter number Only" title="Please Enter Letter Only Above 3 characters "   value="" size='20%' id="txt_lname" placeholder='name'></td></tr>  
+</tr>		  	 	  
+   <!-- pick up date-->
+   <tr><td colspan="2"> </td></tr>
+  </label></td>
+ <tr><td  align="right"colspan=""> <input size="100"type="submit" class="submit" value="Send"/>
+ <td align="left"> <input size="100"type="reset" class="submit" value="Clear"/></td></tr></td>
+  </table>
+</fieldset>                  
+</form>
+	</div> 
+		  <!-- ################################################################################################ --> 
+        </div>
+        <!-- / Left Column --> 
+		 <!-- Right Column -->
+        
+      <!-- ################################################################################################ --> 
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+</div>
+      <!-- ################################################################################################ --> 
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <div class="rounded">
+    <footer id="footer" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_third first">
+        <figure class="center"><img class="btmspace-15" src="images/demo/worldmap.png" alt="">
+          <figcaption><a href="#">Find Us With Google Maps &raquo;</a></figcaption>
+        </figure>
+      </div>
+      <div class="one_third">
+        <address>
+        Long Educational Facility Name<br>
+        Address Line 2<br>
+        Town/City<br>
+        Postcode/Zip<br>
+        <br>
+        <i class="fa fa-phone pright-10"></i> xxxx xxxx xxxxxx<br>
+        <i class="fa fa-envelope-o pright-10"></i> <a href="#">contact@domain.com</a>
+        </address>
+      </div>
+      <div class="one_third">
+        <p class="nospace btmspace-10">Stay Up to Date With What's Happening</p>
+        <ul class="faico clear">
+          <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="faicon-flickr" href="#"><i class="fa fa-flickr"></i></a></li>
+          <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <legend>Subscribe To Our Newsletter:</legend>
+            <input type="text" value="" placeholder="Enter Email Here&hellip;">
+            <button class="fa fa-sign-in" type="submit" title="Sign Up"><em>Sign Up</em></button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ --> 
+    </footer>
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - </p>
+    
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+<!-- JAVASCRIPTS --> 
+<script src="layout/scripts/jquery.min.js"></script> 
+<script src="layout/scripts/jquery.fitvids.min.js"></script> 
+<script src="layout/scripts/jquery.mobilemenu.js"></script> 
+<script src="layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+</body>
+</html>
